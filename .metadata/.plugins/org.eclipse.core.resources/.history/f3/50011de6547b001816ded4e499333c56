@@ -1,0 +1,21 @@
+/* 학습내용
+ * 1. 조건식 
+ * 2. 문법
+ * 		1. 조건 상황이 하나인 경우
+ * 		2. 조건 상황이 다수인 경우
+ * 		3. 조건 상황들이 아닌 경우도 고려해야 하는 경우
+ * 
+ */
+
+
+
+
+package step01.syntax;
+
+public class Step09If {
+
+	public static void main(String[] args) {
+		
+	}
+
+}

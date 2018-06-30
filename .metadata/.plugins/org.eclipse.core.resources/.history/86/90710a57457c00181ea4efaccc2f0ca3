@@ -1,0 +1,19 @@
+package project.domain;
+
+public class districtDTO {
+	private String district;
+	private int caseSum;
+	private int arrestSum;
+	private int killCase;
+	private int killArrest;
+	private int robberCase;
+	private int robberArrest;
+	private int rapeCase;
+	private int rapeArrest;
+	private int theftCase;
+	private int theftArrest;	
+	private int attackCase;	
+	private int attackArrest;	
+	private int population;
+
+}

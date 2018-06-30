@@ -1,0 +1,54 @@
+/*학습내용
+ * 1. static 키워드
+ * 2. 적용 문법
+ * 		1. 멤버 변수 선언구
+ * 			- 생성되는 모든 객체들이 공유하는 변수 (peopleDTO는 HEAP의 저장됨)
+ * 			- static 변수가 메모리에 실제 사용 가능하게 
+ *            생성되는 시점은 ? 
+ *            :실행 코드인 byte code가 메모리에
+ *            	로딩(저장)될때 자동 실행 
+ * 		2. 메소드 선언구
+ * 		3. static{}
+ * 			- web server가 시작될 때 모든 user가 공유하는 자원이 있다면
+ * 			 자원이 있다면 단 한번 실행 보장을 할 수 있는 문법 
+ * 			이름이 없음 따라서 코드로 호출 불가
+ * 			-byte code가 메모리에 로딩될 때 자동 실행 
+ * 			
+ * 
+ */
+
+package step01.syntax;
+
+import org.omg.Messaging.SyncScopeHelper;
+
+public class Step06static {
+	//step02 - static 변수 
+	static int no = 100;
+	static String msg = "문자열";
+	//instance 변수 :사용시 반드시 객체 생성 후 사용//생성자를 만들어야 한다. 우리가 이제까지 했던 것 
+    int no2 = 200; //바이트 코드만 올리만 static은 적자마자 memory에 실행되게 함 
+	String msg2 = "문자열 2";
+			
+	public static void main(String[] args) {
+		System.out.println(no);
+		System.out.println(msg);
+		//System.out.println(no2);(얘는 int라서 실행 안됨)
+	}
+}	
+	
+		//step01- static{}
+//	static {	
+//	System.out.println(2);
+//	}
+//
+//	public static void main(String[] args) {
+//		System.out.println("main");
+//
+//}
+//	static {
+//		System.out.println(1);
+//	}
+//	
+//}
+
+//답 1 2 main

@@ -1,0 +1,30 @@
+package step01.service;
+
+import step01.domain.FriendVO;
+
+public class FriendTest {
+
+	//java program의 start point 필수 메소드 
+		public static void main(String [] a) {
+			FriendVO p1 = new FriendVO();
+			p1.name = "황인범";
+			p1.cellPhone = "010-000-000";
+			p1.age = 27;
+			System.out.println(p1);
+			System.out.println(p1.name + " " + p1.cellPhone + " "+ p1.age);
+					
+							
+			FriendVO p2 = new FriendVO();
+			p2.name = "이나리";
+			p2.cellPhone = "010-111-111";
+			p2.age = 25;
+			System.out.println(p2);
+			System.out.println(p2.name + " " + p2.cellPhone + " "+ p2.age);
+			
+			FriendVO p3 = new FriendVO();
+			p3.name = "이동규";
+			p3.cellPhone = "010-222-222";
+			p2.age = 26;
+			System.out.println(p3);
+			System.out.println(p3.name + " " + p3.cellPhone + " "+ p3.age);
+			}

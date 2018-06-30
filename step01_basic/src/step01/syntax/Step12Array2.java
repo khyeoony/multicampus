@@ -1,0 +1,71 @@
+/*학습내용
+ * 1. 배열 타입을 이용한 응용력 향상
+ * 2. String 데이터값 비교하기
+ * 		-public boolean equals(String v){문자열 비교}
+ * 3. 동등비교 연산자
+ * 		==
+ * 		1. 기본 타입 : 순수 값비교
+ * 		2. 객체 타입 : 주소값(위치) 비교
+ */
+
+package step01.syntax;
+
+import step01.domain.PeopleDTO;
+
+public class Step12Array2 {
+	//문자열 비교 
+	public static void equalsTest(String v) {//이 v는 받는것 main에서 받는 것
+		String id = "tester";
+		System.out.println(id.equals(v));//호출할 때 . 쓴다 
+	}
+	//==동등 비교 연산자로 비교 
+	public static void operator(int i) {//i와 data는 다른 것이다
+		int data = 10;
+		System.out.println(data == i);
+	}
+	//객체 타입 비교 : 주소값 비교
+	public static void operator(PeopleDTO dto) {
+		PeopleDTO p= new PeopleDTO("name", 10);
+		System.out.println(p == dto);
+		System.out.println(p.getName().equals(dto.getName()));
+	
+	
+	// System.out.println(p.getName().equals(dto.getName()));와 동일한 코드 
+	String name = p.getName();
+	String name2 = dto.getName();
+	name.equals(name2);
+}
+	
+	/*p.getName().eqauls ( dto.getName())실행순서
+	 *p:PeopleDTO
+	 * p.getName() : PeopleDTO의 name String값 반환된 로직
+	 * p.getName().equals() : String의 equals() 호출만
+	 * dto.getName() : dto의 getName() 즉 name 변수값 획득
+	 *  dto.getName()의 결과값이 확실히 반환되면 equals() 실행
+	 */
+	
+	//배열의 length 변수 사용 연습
+	public static void lenghtTest() {
+		int[]i = {1, 4, 65, 7, 8};
+		for (int index=0; index < i.length; index++) {//length는 5지만 index는 0,1,2,3 라서 4이다. 
+			System.out.print(i[index]+"\t");
+		}
+	}
+	
+	
+	//String[] 여러명으 ID값을 저장 후 하나의 id값을 주면서 존재 여부 반환 
+	
+
+	
+	
+
+	public static void main(String[] args) {
+		equalsTest("tester");
+		equalsTest("e");
+		operator(10);
+		operator(3);
+		operator(new PeopleDTO("name",10)); //false 값이 아무리 똑같아도 새로운 객체를 만들어서 false 같지 않다. 
+		lenghtTest();
+	}
+
+}

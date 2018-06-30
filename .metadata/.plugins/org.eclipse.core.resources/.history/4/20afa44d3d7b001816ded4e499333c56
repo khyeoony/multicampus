@@ -1,0 +1,46 @@
+package step01.syntax;
+
+public class Step08Loop {
+		//for - 1~5, 키보드의 tab과 동일한 키보드 "\t"
+		/* 1~5까지 가변적인 데이터 보유하게 되는 변수
+		 * 1~1씩 증가하는 로직
+		 * 변수값이 5와 비교해서 6이라면 종료 ... 즉 조건식
+		 * for(초기식; 조건식; 증감식){
+		 * 		조건식이 true인 경우 실행되는 블록 
+		 * }
+		 * 
+		 */
+		public static void forTest() {
+			for(int i=1; i <=5; i++) { //i++ = i+1; 동일한 문장 
+				System.out.println(i + "\t");
+				
+			}
+		}
+		
+		public static void forTest2() {
+			for(int i=1; i <=5; i++) { //i++ = i+1; 동일한 문장 
+				System.out.println('*' + "\t");
+				
+			}
+		}
+		//반복하는 수 만큼 데이터 적재(누적,저장)해서 출력	
+		public static void forTest3() {
+				char star = '*';
+				for(int i=1; i <=5; i++) { //i++ = i+1; 동일한 문장 
+					System.out.println(star);
+					
+				}
+		}		
+		//while 
+	
+		//do_while
+	
+	
+	
+	public static void main(String[] args) {
+		Step08Loop.forTest();
+		System.out.println();
+		forTest2();
+	}
+
+}
